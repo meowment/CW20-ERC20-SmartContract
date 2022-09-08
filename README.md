@@ -1,7 +1,7 @@
 # CW20-ERC20-Tutorial
 
 This will take you through uploading your own CW-20/ERC-20 to the Source Chain testnet.
-It uses the examples in the contracts/erc20 folder of the cosmwasm-examples repo.
+It uses the examples in the contracts/erc20 folder of the cosmwasm-examples (https://github.com/CosmWasm/cosmwasm-examples) repo.
 There are four steps involved in working with a smart contract.
 
 - Write the smart contract (already done here!)
