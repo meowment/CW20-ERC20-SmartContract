@@ -54,3 +54,26 @@ sudo docker run --rm -v "$(pwd)":/code \
     --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
     cosmwasm/rust-optimizer:0.12.6
 ```
+This will result in an artifact called cw_erc20.wasm being created in the artifacts directory.
+
+### UPLOADING
+```
+cd artifacts
+sourced tx wasm store cw_erc20.wasm  --from <your-key> --chain-id=<chain-id> \
+  --gas-prices 0.1usource --gas auto --gas-adjustment 1.3 -b block -y
+```
+
+You will need to look in the output for this command for the code ID of the contract.
+it will look like {"key":"code_id","value":"6"} in the output.
+
+Or by doing these steps instead, and use the jq tool installed earlier to get the code_id value:
+```
+cd artifacts
+TX=$(sourced tx wasm store cw_erc20.wasm  --from <your-key> --chain-id=<chain-id> --gas-prices 0.1usource --gas auto --gas-adjustment 1.3 -b block --output json -y | jq -r '.txhash')
+CODE_ID=$(sourced query tx $TX --output json | jq -r '.logs[0].events[-1].attributes[0].value')
+```
+You can now see this value with:
+```
+echo $CODE_ID
+```
+
