@@ -31,3 +31,26 @@ rustup target add wasm32-unknown-unknown
 ```
 
 ### DOWNLOAD
+
+```
+git clone https://github.com/CosmWasm/cosmwasm-examples
+cd cosmwasm-examples
+git fetch
+git checkout 44d6a256cd99e66849e550185c98671d4109d78b # current at time of writing, should be cw 1.0.0-beta
+cd contracts/erc20
+```
+
+### COMPILE
+We can compile our contract like so:
+```
+rustup default stable
+
+cargo wasm
+```
+However, we want to create an optimised version to limit gas usage, so we're going to run:
+```
+sudo docker run --rm -v "$(pwd)":/code \
+    --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target \
+    --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
+    cosmwasm/rust-optimizer:0.12.6
+```
