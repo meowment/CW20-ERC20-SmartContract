@@ -15,7 +15,7 @@ Execute commands provided by the smart contract
 We will go through all of these in this tutorial.
 
 
-INSTALLING RUST
+### INSTALLING RUST
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -33,3 +33,4 @@ rustup target list --installed
 rustup target add wasm32-unknown-unknown
 ```
 
+### DOWNLOAD
