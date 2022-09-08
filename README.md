@@ -17,6 +17,6 @@ We will go through all of these in this tutorial.
 
 INSTALLING RUST
 
-'
+```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-'
+```
