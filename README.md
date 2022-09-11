@@ -114,9 +114,11 @@ Check that the contract has assigned the right amount balance
 sourced query wasm contract-state smart <contract-address> '{"balance":{"address":"<yourwalletaddress>"}}'
 ```
 From the example above, it will return:
+```
 data:
   balance: "12345678000"
-  
+```
+
 Excute command
 ```
 sourced tx wasm execute <contract-addr> '{"transfer":{"amount":"200","owner":"<yourwalletaddress>","recipient":"<recipient-address>"}}' --from <your-key> --chain-id <chain-id>
