@@ -103,3 +103,6 @@ CONTRACT_ADDR=$(sourced query wasm list-contract-by-code $CODE_ID --output json 
 ```
 sourced query wasm contract $CONTRACT_ADDR
 ```
+
+### Query And Run Commands
+
