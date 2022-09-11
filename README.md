@@ -80,6 +80,7 @@ You can now see this value with:
 echo $CODE_ID
 ```
 ### Initialize The Contract
+This example using node, type node and enter to access it
 ```
 > const initHash = {
   name: "Meow Coin",
