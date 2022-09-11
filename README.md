@@ -66,11 +66,9 @@ sourced tx wasm store cw_erc20.wasm  --from <your-key> --chain-id=<chain-id> \
 You will need to look in the output for this command for the code ID of the contract.
 it will look like {"key":"code_id","value":"6"} in the output.
 
-Or by doing these steps instead, and use the jq tool installed earlier to get the code_id value:
+Add Variables
 ```
-cd artifacts
-TX=$(sourced tx wasm store cw_erc20.wasm  --from <your-key> --chain-id=<chain-id> --gas-prices 0.1usource --gas auto --gas-adjustment 1.3 -b block --output json -y | jq -r '.txhash')
-CODE_ID=$(sourced query tx $TX --output json | jq -r '.logs[0].events[-1].attributes[0].value')
+CODE_ID=<yourcodeid>
 ```
 You can now see this value with:
 ```
