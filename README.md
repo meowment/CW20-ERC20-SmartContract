@@ -81,7 +81,7 @@ echo $CODE_ID
   symbol: "MEOW",
   decimals: 6,
   initial_balances: [
-    { address: "sourcevaloper1tr8h5v8t60kma86qemdg69zn4q38u8c8h8g0yd", amount: "12345678000"},
+    { address: "<yourwalletaddress>", amount: "12345678000"},
   ]
 };
 ```
