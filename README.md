@@ -64,7 +64,7 @@ This will result in an artifact called cw_erc20.wasm being created in the artifa
 ### UPLOADING
 ```
 cd artifacts
-sourced tx wasm store cw_erc20.wasm  --from <your-key> --chain-id=<chain-id> \
+sourced tx wasm store cw_erc20.wasm  --from <yourwallet> --chain-id=<chain-id> \
   --gas-prices 0.1usource --gas auto --gas-adjustment 1.3 -b block -y
 ```
 
