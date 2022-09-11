@@ -82,7 +82,7 @@ echo $CODE_ID
 ### Initialize The Contract
 This example using node, type node and enter to access it
 ```
-> const initHash = {
+const initHash = {
   name: "Meow Coin",
   symbol: "MEOW",
   decimals: 6,
@@ -93,7 +93,7 @@ This example using node, type node and enter to access it
 ```
 Then
 ```
-> JSON.stringify(initHash);
+JSON.stringify(initHash);
 ```
 ```
 sourced tx wasm instantiate 6 \
