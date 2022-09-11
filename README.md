@@ -97,7 +97,7 @@ Then
 ```
 ```
 sourced tx wasm instantiate 6 \
-    '{"name":"Meow Coin","symbol":"MEOW","decimals":6,"initial_balances":[{"address":"<validator-self-delegate-address>","amount":"12345678000"}]}' \
+    '{"name":"Meow Coin","symbol":"MEOW","decimals":6,"initial_balances":[{"address":"<yourwalletaddress>","amount":"12345678000"}]}' \
     --amount 50000usource  --label "Meow Coin ERC20" --from <yourwallet> --chain-id <chainid> --gas-prices 0.1usource --gas auto --gas-adjustment 1.3 -b block -y
 ```
 if success you will get output
