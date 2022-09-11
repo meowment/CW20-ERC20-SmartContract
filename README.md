@@ -109,4 +109,7 @@ sourced query wasm contract $CONTRACT_ADDR
 ```
 
 ### Query And Run Commands
-
+Check that the contract has assigned the right amount balance
+```
+sourced query wasm contract-state smart <contract-address> '{"balance":{"address":"<yourwalletaddress>"}}'
+```
