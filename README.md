@@ -104,13 +104,14 @@ if success you will get output
 ```
 CONTRACT_ADDR=$(sourced query wasm list-contract-by-code $CODE_ID --output json | jq -r '.contracts[0]')
 ```
-Check contract address
-```
-sourced query wasm list-contract-by-code $CODE_ID
-```
 ```
 sourced query wasm contract $CONTRACT_ADDR
 ```
+Or check contract address list with:
+```
+sourced query wasm list-contract-by-code $CODE_ID
+```
+
 ### Query And Run Commands
 Check that the contract has assigned the right amount balance
 ```
