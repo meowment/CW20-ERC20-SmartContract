@@ -80,7 +80,7 @@ You can now see this value with:
 echo $CODE_ID
 ```
 ### Initialize The Contract
-This example using node, type node and enter to access it
+This example using nodejs, type node and enter to access it
 ```
 const initHash = {
   name: "Meow Coin",
@@ -96,7 +96,7 @@ Then
 JSON.stringify(initHash);
 ```
 ```
-sourced tx wasm instantiate 6 \
+sourced tx wasm instantiate $CODE_ID \
     '{"name":"Meow Coin","symbol":"MEOW","decimals":6,"initial_balances":[{"address":"<yourwalletaddress>","amount":"12345678000"}]}' \
     --amount 50000usource  --label "Meow Coin ERC20" --from <yourwallet> --chain-id <chainid> --admin <yourwallet> --gas-prices 0.1usource --gas auto --gas-adjustment 1.3 -b block -y
 ```
