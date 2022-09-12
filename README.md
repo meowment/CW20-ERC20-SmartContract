@@ -109,7 +109,7 @@ sourced query wasm contract $CONTRACT_ADDR
 ```
 Check contract address
 ```
-sourced query wasm list-contract-by-code <code-id>
+sourced query wasm list-contract-by-code $CODE_ID
 ```
 ### Query And Run Commands
 Check that the contract has assigned the right amount balance
