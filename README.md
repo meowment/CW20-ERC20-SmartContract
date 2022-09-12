@@ -107,7 +107,10 @@ CONTRACT_ADDR=$(sourced query wasm list-contract-by-code $CODE_ID --output json 
 ```
 sourced query wasm contract $CONTRACT_ADDR
 ```
-
+Check contract address
+```
+sourced query wasm list-contract-by-code <code-id>
+```
 ### Query And Run Commands
 Check that the contract has assigned the right amount balance
 ```
@@ -121,5 +124,5 @@ data:
 
 Excute command
 ```
-sourced tx wasm execute <contract-addr> '{"transfer":{"amount":"200","owner":"<yourwalletaddress>","recipient":"<recipient-address>"}}' --from <your-key> --chain-id <chain-id>
+sourced tx wasm execute <contract-addr> '{"transfer":{"amount":"200","owner":"<yourwalletaddress>","recipient":"<recipient-address>"}}' --amount 1000usource --from <yourwallet> --chain-id <chainid> --gas-prices 0.1usource --gas auto --gas-adjustment 1.3 -b block -y
 ```
