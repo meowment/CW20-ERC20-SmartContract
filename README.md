@@ -11,17 +11,16 @@ There are four steps involved in working with a smart contract.
 
 We will go through all of these in this tutorial.
 
-
 ### INSTALLING
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ```
-apt-get install cargo.io
+sudo apt-get install cargo.io
 ```
 ```
-apt-get install nodejs
+sudo apt-get install nodejs
 ```
 Once installed, make sure you have the wasm32 target:
 
